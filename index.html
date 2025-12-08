@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Alien Cat - Bot de Discord avanzado para moderación y gestión de tu servidor">
     <meta name="theme-color" content="#8b5cf6">
+    
+    <meta property="og:title" content="Alien Cat - Bot de Discord">
+    <meta property="og:description" content="Bot de Discord avanzado para moderación, tickets, entretenimiento y gestión de servidores. +117 comandos disponibles.">
+    <meta property="og:image" content="https://dnx-studios.github.io/aliencat-dcbot/assets/images/bot-avatar.jpg">
+    <meta property="og:url" content="https://dnx-studios.github.io/aliencat-dcbot/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alien Cat">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alien Cat - Bot de Discord">
+    <meta name="twitter:description" content="Bot de Discord avanzado para moderación, tickets, entretenimiento y gestión de servidores.">
+    <meta name="twitter:image" content="https://dnx-studios.github.io/aliencat-dcbot/assets/images/bot-avatar.jpg">
+    
     <link rel="icon" type="image/jpeg" href="assets/images/bot-avatar.jpg">
     <link rel="apple-touch-icon" href="assets/images/bot-avatar.jpg">
     <title>Alien Cat - Bot de Discord Avanzado</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=20">
+    <link rel="stylesheet" href="assets/css/style.css?v=21">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -212,6 +225,78 @@
             </div>
         </div>
     </section>
+
+    <section id="galeria" class="gallery-section">
+        <div class="section-glow"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-images"></i> Galería
+                </span>
+                <h2 class="section-title">Mira a <span class="gradient-text">Alien Cat</span> en Acción</h2>
+                <p class="section-subtitle">Capturas de pantalla del bot funcionando en servidores reales</p>
+            </div>
+            
+            <div class="gallery-3d-container">
+                <div class="gallery-3d-wrapper">
+                    <div class="gallery-3d-carousel" id="gallery-carousel">
+                        <div class="gallery-3d-item">
+                            <img src="assets/images/gallery/gallery-1.jpg" alt="Alien Cat Screenshot 1">
+                            <div class="gallery-item-glow"></div>
+                        </div>
+                        <div class="gallery-3d-item">
+                            <img src="assets/images/gallery/gallery-2.jpg" alt="Alien Cat Screenshot 2">
+                            <div class="gallery-item-glow"></div>
+                        </div>
+                        <div class="gallery-3d-item">
+                            <img src="assets/images/gallery/gallery-3.jpg" alt="Alien Cat Screenshot 3">
+                            <div class="gallery-item-glow"></div>
+                        </div>
+                        <div class="gallery-3d-item">
+                            <img src="assets/images/gallery/gallery-4.jpg" alt="Alien Cat Screenshot 4">
+                            <div class="gallery-item-glow"></div>
+                        </div>
+                        <div class="gallery-3d-item">
+                            <img src="assets/images/gallery/gallery-5.jpg" alt="Alien Cat Screenshot 5">
+                            <div class="gallery-item-glow"></div>
+                        </div>
+                        <div class="gallery-3d-item">
+                            <img src="assets/images/gallery/gallery-6.jpg" alt="Alien Cat Screenshot 6">
+                            <div class="gallery-item-glow"></div>
+                        </div>
+                        <div class="gallery-3d-item">
+                            <img src="assets/images/gallery/gallery-7.jpg" alt="Alien Cat Screenshot 7">
+                            <div class="gallery-item-glow"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="gallery-nav gallery-prev" id="gallery-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-nav gallery-next" id="gallery-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="gallery-indicators" id="gallery-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery-lightbox" id="gallery-lightbox">
+        <button class="lightbox-close" id="lightbox-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="Imagen ampliada" id="lightbox-image">
+        </div>
+    </div>
 
     <section id="comandos" class="commands">
         <div class="container">
@@ -803,25 +888,36 @@
                 <div class="footer-links">
                     <h4>Recursos</h4>
                     <ul>
-                        <li><a href="#"><i class="fas fa-book"></i> Documentación</a></li>
-                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fas fa-headset"></i> Soporte</a></li>
+                        <li><a href="docs.html"><i class="fas fa-book"></i> Documentación</a></li>
+                        <li><a href="docs.html#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="support.html"><i class="fas fa-headset"></i> Soporte</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#"><i class="fas fa-file-contract"></i> Términos</a></li>
-                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacidad</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Términos</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacidad</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Alien Cat. Desarrollado con <i class="fas fa-heart" style="color: var(--christmas-red);"></i> por <a href="#">dinox_oficial</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js?v=18"></script>
+    <div class="copyright-banner">
+        <div class="copyright-decoration">
+            <div class="copyright-line"></div>
+            <div class="copyright-icon">
+                <i class="fas fa-cat"></i>
+            </div>
+            <div class="copyright-line"></div>
+        </div>
+        <div class="copyright-content">
+            <p>&copy; 2025 Alien Cat Bot. Desarrollado con <i class="fas fa-heart"></i> por <a href="https://discord.gg/dTxBd6VZMt" target="_blank">dinox_oficial</a></p>
+            <p class="copyright-sub">Todos los derechos reservados. No afiliado con Discord Inc.</p>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js?v=20"></script>
 </body>
 </html>
