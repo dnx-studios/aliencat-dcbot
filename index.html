@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Alien Cat - Bot de Discord avanzado para moderación y gestión de tu servidor">
+    <meta name="theme-color" content="#8b5cf6">
+    <link rel="icon" type="image/jpeg" href="assets/images/bot-avatar.jpg">
+    <link rel="apple-touch-icon" href="assets/images/bot-avatar.jpg">
+    <title>Alien Cat - Bot de Discord Avanzado</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=19">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+    <div class="cursor-trail"></div>
+
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="nebula"></div>
+    
+    <div class="christmas-lights">
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+        <div class="christmas-light"></div>
+    </div>
+    
+    <div class="christmas-decorations">
+        <div class="floating-ornament">🎄</div>
+        <div class="floating-ornament">🎁</div>
+        <div class="floating-ornament">⭐</div>
+        <div class="floating-ornament">🔔</div>
+        <div class="floating-ornament">🎅</div>
+        <div class="floating-ornament">❄️</div>
+    </div>
+    
+    <div class="snowflakes-container" id="snowflakes-container"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <div class="logo-glow"></div>
+                <img src="assets/images/bot-avatar.jpg" alt="Alien Cat" class="logo-icon-img">
+                <span class="logo-text">Alien Cat</span>
+            </a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1402925700402380871" class="nav-btn" target="_blank">
+                <span class="btn-glow"></span>
+                <i class="fab fa-discord"></i> Invitar Bot
+            </a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-bg-effects">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge christmas-badge">
+                <i class="fas fa-snowflake spinning"></i> Feliz Navidad 2025 <i class="fas fa-snowflake spinning"></i>
+            </div>
+            <div class="hero-avatar">
+                <div class="avatar-pulse"></div>
+                <div class="avatar-glow"></div>
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring-2"></div>
+                <img src="assets/images/bot-avatar.jpg" 
+                     alt="Alien Cat" 
+                     class="avatar-image" 
+                     id="bot-avatar">
+                <div class="avatar-sparkles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text glitch" data-text="Alien Cat">Alien Cat</span>
+            </h1>
+            <p class="hero-subtitle">
+                El bot de Discord más avanzado para la moderación y gestión de tu servidor. 
+                Potente, rápido y fácil de usar.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://discord.com/oauth2/authorize?client_id=1402925700402380871" class="btn btn-primary btn-glow-effect" target="_blank">
+                    <span class="btn-content">
+                        <i class="fab fa-discord"></i> Añadir a Discord
+                    </span>
+                    <span class="btn-shimmer"></span>
+                </a>
+                <a href="#comandos" class="btn btn-secondary btn-glow-effect">
+                    <span class="btn-content">
+                        <i class="fas fa-terminal"></i> Ver Comandos
+                    </span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="75">0</span>+
+                        <span class="stat-label">Servidores</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="10658">0</span>+
+                        <span class="stat-label">Usuarios</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="117">0</span>+
+                        <span class="stat-label">Comandos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Desliza hacia abajo</span>
+        </div>
+    </section>
+
+    <section id="caracteristicas" class="features">
+        <div class="section-glow"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-star"></i> Características
+                </span>
+                <h2 class="section-title">¿Por qué elegir <span class="gradient-text">Alien Cat</span>?</h2>
+                <p class="section-subtitle">Diseñado para hacer tu servidor más seguro y organizado</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-tilt>
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Moderación Avanzada</h3>
+                    <p>Sistema completo de moderación con mute, ban, kick, warn y mucho más. Mantén tu servidor seguro y ordenado.</p>
+                    <div class="feature-shine"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Respuesta Instantánea</h3>
+                    <p>Comandos ultra rápidos con latencia mínima. Tu servidor funcionará sin interrupciones ni retrasos.</p>
+                    <div class="feature-shine"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Altamente Configurable</h3>
+                    <p>Personaliza cada aspecto del bot según las necesidades de tu servidor. Modlog, alertas y más.</p>
+                    <div class="feature-shine"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Slash Commands</h3>
+                    <p>Soporte completo para comandos slash (/) y comandos con prefijo (!). Usa el que prefieras.</p>
+                    <div class="feature-shine"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Historial Completo</h3>
+                    <p>Registro detallado de todas las acciones de moderación. Nunca pierdas el rastro de lo que sucede.</p>
+                    <div class="feature-shine"></div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Protección del Servidor</h3>
+                    <p>Funciones anti-raid, join-lock y alertas de palabras clave para proteger tu comunidad.</p>
+                    <div class="feature-shine"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comandos" class="commands">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-terminal"></i> Comandos
+                </span>
+                <h2 class="section-title">Comandos <span class="gradient-text">Disponibles</span></h2>
+                <p class="section-subtitle">Explora todas las herramientas que Alien Cat tiene para ti</p>
+            </div>
+            
+            <div class="commands-tabs">
+                <button class="tab-btn active" data-tab="moderation">
+                    <i class="fas fa-gavel"></i> <span>Moderación</span>
+                </button>
+                <button class="tab-btn" data-tab="entertainment">
+                    <i class="fas fa-heart"></i> <span>Diversión</span>
+                </button>
+                <button class="tab-btn" data-tab="minigames">
+                    <i class="fas fa-gamepad"></i> <span>Mini Juegos</span>
+                </button>
+                <button class="tab-btn" data-tab="tickets">
+                    <i class="fas fa-ticket-alt"></i> <span>Tickets</span>
+                </button>
+                <button class="tab-btn" data-tab="utility">
+                    <i class="fas fa-wrench"></i> <span>Utilidad</span>
+                </button>
+                <button class="tab-btn" data-tab="config">
+                    <i class="fas fa-cog"></i> <span>Configuración</span>
+                </button>
+            </div>
+
+            <div class="commands-content">
+                <div class="tab-content active" id="moderation">
+                    <div class="commands-grid">
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/mute</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Silencia a un usuario temporalmente. Soporta duraciones como 10m, 1h, 1d.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/unmute</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Quita el silenciamiento de un usuario para que pueda hablar nuevamente.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/warn</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Advierte a un usuario. Las advertencias se guardan y acumulan.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/unwarn</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Elimina una advertencia específica de un usuario usando su ID.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/history-warns</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Muestra el historial completo de advertencias de un usuario.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/ban</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Banea permanentemente a un usuario del servidor.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/unban</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Desbanea a un usuario usando su ID.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/tempban</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Banea temporalmente a un usuario. Se desbanea automáticamente.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/kick</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Expulsa a un usuario del servidor. Puede volver a unirse.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/softban</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Banea y desbanea inmediatamente, eliminando los mensajes del usuario.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/purge</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Elimina múltiples mensajes de un canal rápidamente.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/nuke</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Recrea el canal completamente, eliminando todos los mensajes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="entertainment">
+                    <div class="commands-grid">
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/hug</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Abraza a otro usuario con un GIF animado.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/kiss</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Dale un besito a otro usuario con GIF.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/slap</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Cachetea a otro usuario con animación.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/bonk</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Dale un bonk a alguien con GIF divertido.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/pat</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Acaricia la cabeza de otro usuario.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/8ball</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Pregunta a la bola mágica 8.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/ship</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Calcula la compatibilidad entre usuarios.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/roast</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Quema a alguien con un insulto gracioso.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="minigames">
+                    <div class="commands-grid">
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/rps</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Juega piedra, papel o tijera contra el bot.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/coinflip</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Lanza una moneda al aire.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/dice</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Tira un dado de 6 caras.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/trivia</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Responde preguntas de trivia.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="tickets">
+                    <div class="commands-grid">
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/ticket-setup</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Configura el sistema de tickets en tu servidor.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/ticket-close</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Cierra un ticket de soporte.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/ticket-add</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Añade un usuario a un ticket existente.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/ticket-remove</code>
+                                <span class="command-tag tag-mod">Moderador</span>
+                            </div>
+                            <p>Elimina un usuario de un ticket.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="utility">
+                    <div class="commands-grid">
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/userinfo</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Muestra información detallada de un usuario.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/serverinfo</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Muestra estadísticas e información del servidor.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/avatar</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Obtén el avatar de un usuario en alta calidad.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/ping</code>
+                                <span class="command-tag tag-all">Todos</span>
+                            </div>
+                            <p>Comprueba la latencia del bot.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="config">
+                    <div class="commands-grid">
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/modlog</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Configura el canal de logs de moderación.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/welcome</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Configura los mensajes de bienvenida.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/autorole</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Asigna roles automáticamente a nuevos miembros.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-header">
+                                <code>/prefix</code>
+                                <span class="command-tag tag-admin">Admin</span>
+                            </div>
+                            <p>Cambia el prefijo del bot en tu servidor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="actualizaciones" class="updates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-history"></i> Actualizaciones
+                </span>
+                <h2 class="section-title">Historial de <span class="gradient-text">Cambios</span></h2>
+                <p class="section-subtitle">Mantente al día con las últimas mejoras</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon completed">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Diciembre 2025</span>
+                        <h3>Edición Navideña</h3>
+                        <p>Nuevo tema navideño para el sitio web con animaciones festivas y copos de nieve dinámicos.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Navidad</span>
+                            <span class="tag">Animaciones</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon completed">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Noviembre 2025</span>
+                        <h3>Sistema de Tickets</h3>
+                        <p>Nuevo sistema de tickets de soporte completamente personalizable.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Tickets</span>
+                            <span class="tag">Soporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon in-progress">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">En Progreso</span>
+                        <h3>Sistema de Economía</h3>
+                        <p>Sistema completo de economía con tienda, trabajos y ranking.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Economía</span>
+                            <span class="tag">Tienda</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon planned">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Próximamente</span>
+                        <h3>Sistema de Niveles</h3>
+                        <p>Gana experiencia y sube de nivel participando en el servidor.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Niveles</span>
+                            <span class="tag">XP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estadisticas" class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-chart-bar"></i> Estadísticas
+                </span>
+                <h2 class="section-title">Números que <span class="gradient-text">Impresionan</span></h2>
+                <p class="section-subtitle">El crecimiento de nuestra comunidad</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="stat-value" data-target="74">0</div>
+                    <div class="stat-label">Servidores Activos</div>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 74%;"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-value" data-target="20000">0</div>
+                    <div class="stat-label">Usuarios Totales</div>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="stat-value" data-target="59">0</div>
+                    <div class="stat-label">Comandos Disponibles</div>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-value" data-target="99">0</div>
+                    <div class="stat-label">% Uptime</div>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 99%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topgg-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-trophy"></i> Top.gg
+                </span>
+                <h2 class="section-title">Apoya a <span class="gradient-text">Alien Cat</span></h2>
+                <p class="section-subtitle">Tu voto nos ayuda a crecer</p>
+            </div>
+            <div class="topgg-grid">
+                <div class="topgg-card">
+                    <div class="topgg-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3>Vota por nosotros</h3>
+                    <p>Tu voto ayuda a que más personas descubran Alien Cat y nos motiva a seguir mejorando.</p>
+                    <a href="#" class="btn btn-primary">
+                        <span class="btn-content">
+                            <i class="fas fa-vote-yea"></i> Votar Ahora
+                        </span>
+                    </a>
+                </div>
+                <div class="topgg-card">
+                    <div class="topgg-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Deja una reseña</h3>
+                    <p>Comparte tu experiencia con Alien Cat y ayuda a otros usuarios a tomar la mejor decisión.</p>
+                    <a href="https://top.gg/bot/1402925700402380871" class="btn btn-secondary" target="_blank">
+                        <span class="btn-content">
+                            <i class="fas fa-pen"></i> Escribir Reseña
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-users"></i> Equipo
+                </span>
+                <h2 class="section-title">Nuestro <span class="gradient-text">Equipo</span></h2>
+                <p class="section-subtitle">Las personas detrás de Alien Cat</p>
+            </div>
+            
+            <div class="team-creator" id="team-creator">
+                <h3><i class="fas fa-crown"></i> Creador</h3>
+                <div class="team-member creator-member">
+                    <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Creador" class="member-avatar" id="creator-avatar">
+                    <div class="member-info">
+                        <span class="member-name" id="creator-name">Dinox_oficial</span>
+                        <span class="member-role">Desarrollador Principal</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-testers">
+                <h3><i class="fas fa-flask"></i> Testers</h3>
+                <div class="testers-grid" id="testers-grid">
+                    <div class="team-member tester-member loading">
+                        <div class="member-avatar-placeholder"></div>
+                        <div class="member-info">
+                            <span class="member-name">Cargando...</span>
+                            <span class="member-role">Tester</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://discord.gg/dTxBd6VZMt" class="btn btn-outline testers-btn" target="_blank">
+                    <span class="btn-content">
+                        <i class="fas fa-user-plus"></i> Testers
+                    </span>
+                </a>
+            </div>
+            
+            <div class="team-collaborators">
+                <h3><i class="fas fa-handshake"></i> Colaboradores</h3>
+                <div class="collaborators-grid" id="collaborators-grid">
+                    <div class="team-member collaborator-member loading">
+                        <div class="member-avatar-placeholder"></div>
+                        <div class="member-info">
+                            <span class="member-name">Cargando...</span>
+                            <span class="member-role">Colaborador</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-glow"></div>
+                <img src="assets/images/bot-avatar.jpg" alt="Alien Cat" class="cta-icon-img">
+                <h2>¿Listo para empezar?</h2>
+                <p>Añade Alien Cat a tu servidor y descubre todo lo que puede hacer por ti.</p>
+                <div class="cta-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1402925700402380871" class="btn btn-primary btn-glow-effect" target="_blank">
+                        <span class="btn-content">
+                            <i class="fab fa-discord"></i> Añadir a Discord
+                        </span>
+                        <span class="btn-shimmer"></span>
+                    </a>
+                    <a href="https://discord.gg/dTxBd6VZMt" class="btn btn-secondary" target="_blank">
+                        <span class="btn-content">
+                            <i class="fas fa-headset"></i> Servidor de Soporte
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/images/bot-avatar.jpg" alt="Alien Cat" class="logo-icon-img">
+                        <span class="logo-text">Alien Cat</span>
+                    </div>
+                    <p>El bot de Discord más avanzado para la moderación y gestión de tu servidor.</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/dTxBd6VZMt" aria-label="Discord" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://github.com" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="#caracteristicas"><i class="fas fa-star"></i> Características</a></li>
+                        <li><a href="#comandos"><i class="fas fa-terminal"></i> Comandos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-book"></i> Documentación</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i> Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Términos</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alien Cat. Desarrollado con <i class="fas fa-heart" style="color: var(--christmas-red);"></i> por <a href="#">dinox_oficial</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js?v=17"></script>
+</body>
+</html>
