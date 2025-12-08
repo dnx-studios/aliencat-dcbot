@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#8b5cf6">
     <link rel="icon" type="image/jpeg" href="assets/images/bot-avatar.jpg">
     <title>Soporte - Alien Cat</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=22">
-    <link rel="stylesheet" href="assets/css/pages.css?v=2">
+    <link rel="stylesheet" href="assets/css/style.css?v=23">
+    <link rel="stylesheet" href="assets/css/pages.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -41,17 +41,11 @@
             border-radius: 50%;
             border: 5px solid #1a1a2e;
             background: #5865f2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-            font-weight: bold;
+            overflow: hidden;
         }
         .discord-server-icon img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
         }
         .discord-server-name {
@@ -106,11 +100,11 @@
             height: 48px;
             border-radius: 50%;
             background: #5865f2;
+            overflow: hidden;
         }
         .discord-owner-avatar img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
         }
         .discord-owner-details {
@@ -145,18 +139,6 @@
         .discord-join-btn:hover {
             background: #4752c4;
             transform: translateY(-2px);
-        }
-        .loading-spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 0.8s ease infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -193,20 +175,20 @@
 
             <div class="support-main">
                 <div class="discord-server-card">
-                    <img src="assets/images/support-banner.jpg" alt="Banner del Servidor" class="discord-server-banner" id="serverBanner">
+                    <img src="assets/images/support-banner.jpg" alt="Banner del Servidor" class="discord-server-banner">
                     <div class="discord-server-content">
                         <div class="discord-server-icon-wrapper">
-                            <div class="discord-server-icon" id="serverIcon">
-                                <i class="fab fa-discord"></i>
+                            <div class="discord-server-icon">
+                                <img src="assets/images/server-icon.png" alt="Server Icon">
                             </div>
                         </div>
-                        <h2 class="discord-server-name" id="serverName">Cargando...</h2>
-                        <p class="discord-server-id" id="serverId">ID: ---</p>
+                        <h2 class="discord-server-name">Alien Cat - Support</h2>
+                        <p class="discord-server-id">ID: 1427158552983638129</p>
                         
                         <div class="discord-server-stats-row">
                             <div class="discord-stat-item">
                                 <i class="fas fa-circle"></i>
-                                <span id="memberCount">--- Miembros</span>
+                                <span>95+ Miembros</span>
                             </div>
                             <div class="discord-stat-item">
                                 <i class="fas fa-comment-dots"></i>
@@ -217,12 +199,12 @@
                         <div class="discord-owner-section">
                             <div class="discord-owner-label">Propietario del Servidor</div>
                             <div class="discord-owner-info">
-                                <div class="discord-owner-avatar" id="ownerAvatar">
-                                    <img src="assets/images/team/owner_avatar.png" alt="Owner" onerror="this.parentElement.innerHTML='<i class=\"fab fa-discord\" style=\"font-size:24px;color:#fff;display:flex;align-items:center;justify-content:center;width:100%;height:100%\"></i>'">
+                                <div class="discord-owner-avatar">
+                                    <img src="assets/images/team/owner_avatar.png" alt="Owner Avatar">
                                 </div>
                                 <div class="discord-owner-details">
-                                    <div class="discord-owner-name" id="ownerName">Cargando...</div>
-                                    <div class="discord-owner-username" id="ownerUsername">@---</div>
+                                    <div class="discord-owner-name">Dinox</div>
+                                    <div class="discord-owner-username">@dinox_oficial</div>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +257,7 @@
                 <div class="contact-methods">
                     <div class="contact-method">
                         <i class="fab fa-discord"></i>
-                        <span id="creatorUsername">dinox_oficial</span>
+                        <span>dinox_oficial</span>
                         <p>Desarrollador Principal</p>
                     </div>
                 </div>
@@ -292,42 +274,5 @@
     <footer class="footer-simple">
         <p>&copy; 2025 Alien Cat. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        async function loadSupportServerData() {
-            try {
-                const response = await fetch('/api/support_server.json');
-                if (response.ok) {
-                    const data = await response.json();
-                    
-                    if (data.name) {
-                        document.getElementById('serverName').textContent = data.name;
-                    }
-                    
-                    if (data.id) {
-                        document.getElementById('serverId').textContent = 'ID: ' + data.id;
-                    }
-                    
-                    if (data.member_count) {
-                        document.getElementById('memberCount').textContent = data.member_count + ' Miembros';
-                    }
-                    
-                    if (data.icon_url) {
-                        document.getElementById('serverIcon').innerHTML = '<img src="' + data.icon_url + '" alt="Server Icon">';
-                    }
-                    
-                    if (data.owner) {
-                        document.getElementById('ownerName').textContent = data.owner.display_name || data.owner.username;
-                        document.getElementById('ownerUsername').textContent = '@' + data.owner.username;
-                        document.getElementById('creatorUsername').textContent = data.owner.username;
-                    }
-                }
-            } catch (error) {
-                console.log('Error loading support server data:', error);
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', loadSupportServerData);
-    </script>
 </body>
 </html>
