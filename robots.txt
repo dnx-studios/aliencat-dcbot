@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dnx-studios.github.io/aliencat-dcbot/sitemap.xml
