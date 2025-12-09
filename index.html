@@ -21,43 +21,13 @@
     <link rel="icon" type="image/jpeg" href="assets/images/bot-avatar.jpg">
     <link rel="apple-touch-icon" href="assets/images/bot-avatar.jpg">
     <title>Alien Cat - Bot de Discord Avanzado</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=21">
+    <link rel="stylesheet" href="assets/css/style.css?v=23">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="cursor-glow"></div>
-    <div class="cursor-trail"></div>
-
     <div class="stars"></div>
-    <div class="twinkling"></div>
     <div class="nebula"></div>
-    
-    <div class="christmas-lights">
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-        <div class="christmas-light"></div>
-    </div>
-    
-    <div class="christmas-decorations">
-        <div class="floating-ornament">🎄</div>
-        <div class="floating-ornament">🎁</div>
-        <div class="floating-ornament">⭐</div>
-        <div class="floating-ornament">🔔</div>
-        <div class="floating-ornament">🎅</div>
-        <div class="floating-ornament">❄️</div>
-    </div>
-    
-    <div class="snowflakes-container" id="snowflakes-container"></div>
     
     <nav class="navbar">
         <div class="nav-container">
@@ -84,20 +54,12 @@
                 <i class="fas fa-snowflake spinning"></i> Feliz Navidad 2025 <i class="fas fa-snowflake spinning"></i>
             </div>
             <div class="hero-avatar">
-                <div class="avatar-pulse"></div>
                 <div class="avatar-glow"></div>
                 <div class="avatar-ring"></div>
-                <div class="avatar-ring-2"></div>
-                <img src="assets/images/bot-avatar.jpg" 
-                     alt="Alien Cat" 
+                <img src="assets/images/server-icon.png" 
+                     alt="Servidor" 
                      class="avatar-image" 
-                     id="bot-avatar">
-                <div class="avatar-sparkles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                     id="server-icon">
             </div>
             <h1 class="hero-title">
                 <span class="gradient-text glitch" data-text="Alien Cat">Alien Cat</span>
@@ -118,6 +80,11 @@
                         <i class="fas fa-terminal"></i> Ver Comandos
                     </span>
                 </a>
+                <button id="external-guard-btn" class="btn btn-external-guard">
+                    <span class="btn-content">
+                        <i class="fas fa-shield-alt"></i> External Guard
+                    </span>
+                </button>
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -225,78 +192,6 @@
             </div>
         </div>
     </section>
-
-    <section id="galeria" class="gallery-section">
-        <div class="section-glow"></div>
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">
-                    <i class="fas fa-images"></i> Galería
-                </span>
-                <h2 class="section-title">Mira a <span class="gradient-text">Alien Cat</span> en Acción</h2>
-                <p class="section-subtitle">Capturas de pantalla del bot funcionando en servidores reales</p>
-            </div>
-            
-            <div class="gallery-3d-container">
-                <div class="gallery-3d-wrapper">
-                    <div class="gallery-3d-carousel" id="gallery-carousel">
-                        <div class="gallery-3d-item">
-                            <img src="assets/images/gallery/gallery-1.jpg" alt="Alien Cat Screenshot 1">
-                            <div class="gallery-item-glow"></div>
-                        </div>
-                        <div class="gallery-3d-item">
-                            <img src="assets/images/gallery/gallery-2.jpg" alt="Alien Cat Screenshot 2">
-                            <div class="gallery-item-glow"></div>
-                        </div>
-                        <div class="gallery-3d-item">
-                            <img src="assets/images/gallery/gallery-3.jpg" alt="Alien Cat Screenshot 3">
-                            <div class="gallery-item-glow"></div>
-                        </div>
-                        <div class="gallery-3d-item">
-                            <img src="assets/images/gallery/gallery-4.jpg" alt="Alien Cat Screenshot 4">
-                            <div class="gallery-item-glow"></div>
-                        </div>
-                        <div class="gallery-3d-item">
-                            <img src="assets/images/gallery/gallery-5.jpg" alt="Alien Cat Screenshot 5">
-                            <div class="gallery-item-glow"></div>
-                        </div>
-                        <div class="gallery-3d-item">
-                            <img src="assets/images/gallery/gallery-6.jpg" alt="Alien Cat Screenshot 6">
-                            <div class="gallery-item-glow"></div>
-                        </div>
-                        <div class="gallery-3d-item">
-                            <img src="assets/images/gallery/gallery-7.jpg" alt="Alien Cat Screenshot 7">
-                            <div class="gallery-item-glow"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="gallery-nav gallery-prev" id="gallery-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="gallery-nav gallery-next" id="gallery-next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <div class="gallery-indicators" id="gallery-indicators"></div>
-            </div>
-        </div>
-    </section>
-
-    <div class="gallery-lightbox" id="gallery-lightbox">
-        <button class="lightbox-close" id="lightbox-close">
-            <i class="fas fa-times"></i>
-        </button>
-        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="lightbox-nav lightbox-next" id="lightbox-next">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="lightbox-content">
-            <img src="" alt="Imagen ampliada" id="lightbox-image">
-        </div>
-    </div>
 
     <section id="comandos" class="commands">
         <div class="container">
@@ -918,6 +813,124 @@
         </div>
     </div>
 
-    <script src="assets/js/main.js?v=20"></script>
+    <div id="flash-overlay" class="flash-overlay"></div>
+    
+    <div id="external-guard-notification" class="external-notification">
+        <div class="notification-content">
+            <i class="fas fa-shield-alt"></i>
+            <span>Tu servidor de Discord necesita proteccion?</span>
+        </div>
+        <button class="notification-close" onclick="closeExternalNotification()">&times;</button>
+    </div>
+
+    <div id="external-support-overlay" class="external-overlay">
+        <div class="external-support-container">
+            <button id="external-back-btn" class="external-back-btn">
+                <i class="fas fa-arrow-left"></i> Volver
+            </button>
+            
+            <div class="external-header">
+                <div class="external-avatar-wrapper">
+                    <div class="external-avatar-glow"></div>
+                    <img src="assets/images/external-support-logo.jpg" alt="External Support Server" class="external-avatar">
+                </div>
+                <h1 class="external-title">External Support</h1>
+                <div class="external-badge">
+                    <i class="fas fa-tools"></i> Servicio Profesional
+                </div>
+            </div>
+
+            <div class="external-content">
+                <div class="external-welcome">
+                    <h2><i class="fas fa-shield-alt"></i> Bienvenidos a External Support</h2>
+                    <p class="external-description">
+                        Un servicio profesional de <strong>antiraid</strong>, <strong>seguridad</strong> y mucho mas 
+                        para tu servidor de Discord. Si tienes problemas o necesitas ayuda, 
+                        contactanos y te brindaremos nuestros servicios de calidad.
+                    </p>
+                </div>
+
+                <div class="external-features-grid">
+                    <div class="external-feature">
+                        <div class="external-feature-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h3>Anti-Raid</h3>
+                        <p>Proteccion avanzada contra ataques masivos</p>
+                    </div>
+                    <div class="external-feature">
+                        <div class="external-feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Seguridad</h3>
+                        <p>Sistemas de seguridad personalizados</p>
+                    </div>
+                    <div class="external-feature">
+                        <div class="external-feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Asistencia continua cuando lo necesites</p>
+                    </div>
+                </div>
+
+                <div class="external-bot-section">
+                    <h3><i class="fas fa-robot"></i> Nuestro Bot</h3>
+                    <div class="external-bot-card">
+                        <img src="assets/images/external-bot-avatar.jpg" alt="External Bot" class="bot-preview-img">
+                        <div class="bot-info">
+                            <h4>Alien Cat</h4>
+                            <p>Bot de Discord avanzado para moderacion y gestion de servidores</p>
+                            <div class="bot-tags">
+                                <span class="bot-tag"><i class="fas fa-gavel"></i> Moderacion</span>
+                                <span class="bot-tag"><i class="fas fa-ticket-alt"></i> Tickets</span>
+                                <span class="bot-tag"><i class="fas fa-gamepad"></i> Diversión</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="external-server-section">
+                    <h3><i class="fas fa-server"></i> Servidor de Soporte</h3>
+                    <div class="external-server-card support-themed">
+                        <div class="server-banner-gradient"></div>
+                        <div class="server-content">
+                            <img src="assets/images/external-server-icon.jpg" alt="External Support" class="server-icon">
+                            <div class="server-info">
+                                <h4>External Support</h4>
+                                <div class="server-features">
+                                    <span class="server-feature"><i class="fas fa-headset"></i> Soporte 24/7</span>
+                                    <span class="server-feature"><i class="fas fa-cog"></i> Administración al 100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="external-cta">
+                    <a href="https://discord.gg/2AyTsA8ekK" class="btn btn-external-join" target="_blank">
+                        <i class="fab fa-discord"></i> Unirse al Servidor de Soporte
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-icon">
+                <i class="fas fa-cookie-bite"></i>
+            </div>
+            <div class="cookie-text">
+                <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas nuestra <a href="privacy.html">Política de Privacidad</a>.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-cookie accept">Aceptar</button>
+                <button id="decline-cookies" class="btn-cookie decline">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js?v=23"></script>
 </body>
 </html>
