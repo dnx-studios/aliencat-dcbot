@@ -270,7 +270,7 @@ document.addEventListener('visibilitychange', () => {
 
 async function fetchBotStats() {
     try {
-        const response = await fetch('/api/stats.json');
+        const response = await fetch('api/stats.json');
         if (response.ok) {
             const data = await response.json();
             const statNumbers = document.querySelectorAll('.stat-number[data-target]');
