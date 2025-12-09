@@ -5227,3 +5227,106 @@ main, header, footer, section, article, aside, nav {
     perspective: 1000px;
     will-change: transform, opacity;
 }
+
+/* ========================================
+   COOKIE BANNER
+   ======================================== */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 15, 25, 0.98);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 20px;
+    z-index: 99999;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.cookie-banner.show {
+    transform: translateY(0);
+}
+
+.cookie-banner.hide {
+    transform: translateY(100%);
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-icon {
+    font-size: 2.5rem;
+    color: #8b5cf6;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.cookie-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.cookie-text a {
+    color: #8b5cf6;
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cookie {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.95rem;
+}
+
+.btn-cookie.accept {
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    color: white;
+}
+
+.btn-cookie.accept:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.4);
+}
+
+.btn-cookie.decline {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.btn-cookie.decline:hover {
+    border-color: #8b5cf6;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookie-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}
